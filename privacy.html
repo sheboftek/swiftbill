@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SwiftBill</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #202325; background: #F7F9FB; padding: 20px; }
+        .container { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #090A0A; }
+        h2 { font-size: 20px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; color: #090A0A; }
+        h3 { font-size: 16px; font-weight: 600; margin-top: 20px; margin-bottom: 8px; color: #202325; }
+        p, li { font-size: 15px; color: #6D7289; margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 6px; }
+        .date { font-size: 14px; color: #82869A; margin-bottom: 24px; }
+        .brand { color: #3053EC; font-weight: 600; }
+        a { color: #3053EC; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #E3E5E6; font-size: 13px; color: #82869A; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="date">Effective Date: March 21, 2026</p>
+
+    <p><span class="brand">SwiftBill</span> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your information when you use the SwiftBill mobile application (the "App").</p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Information You Provide</h3>
+    <ul>
+        <li><strong>Account Information:</strong> When you create an account, we collect your email address and authentication credentials. If you sign in with Apple, we receive the identity token provided by Apple.</li>
+        <li><strong>Business Profile:</strong> Business name, owner name, email, phone number, physical address, website, tax ID, logo, and digital signature that you voluntarily enter.</li>
+        <li><strong>Client Information:</strong> Names, email addresses, phone numbers, and physical addresses of your clients/vendors that you add to the App.</li>
+        <li><strong>Financial Documents:</strong> Invoices, receipts, estimates, contracts, credit notes, and expense records including line items, amounts, payment terms, and notes.</li>
+        <li><strong>Payment Links:</strong> URLs to third-party payment gateways (e.g., Stripe, PayPal) that you choose to include on your documents.</li>
+    </ul>
+
+    <h3>1.2 Information Collected Automatically</h3>
+    <ul>
+        <li><strong>Device Information:</strong> We access UserDefaults for app preferences (language, onboarding state, notification settings). No device identifiers are collected for tracking.</li>
+        <li><strong>Usage Data:</strong> We do not use any analytics or tracking SDKs. We do not collect behavioral data, crash reports, or usage statistics.</li>
+    </ul>
+
+    <h3>1.3 Information We Do NOT Collect</h3>
+    <ul>
+        <li>We do not track your location.</li>
+        <li>We do not access your contacts, photos, or camera without your explicit action (e.g., importing a contact, capturing a receipt photo).</li>
+        <li>We do not use advertising identifiers (IDFA).</li>
+        <li>We do not sell, rent, or trade your personal information to third parties.</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+        <li><strong>App Functionality:</strong> To create, manage, and export business documents (invoices, receipts, estimates, contracts, credit notes).</li>
+        <li><strong>Cloud Sync:</strong> To synchronize your data across your devices when you sign in (optional). Data is stored on Supabase servers.</li>
+        <li><strong>Shared Invoice Links:</strong> When you create a shareable link for a document, the document data is stored on our servers and accessible via a unique token URL. View counts and timestamps are tracked for the shared link only.</li>
+        <li><strong>AI Document Generation:</strong> When you use AI features, your text descriptions are sent to Google Gemini via our secure server-side proxy. We do not store AI prompts or responses on our servers beyond the processing request.</li>
+        <li><strong>Authentication:</strong> To verify your identity and secure your account.</li>
+        <li><strong>Notifications:</strong> To send local payment reminders (scheduled on your device, not sent through our servers).</li>
+    </ul>
+
+    <h2>3. Data Storage and Security</h2>
+
+    <h3>3.1 Local Storage</h3>
+    <p>Your data is primarily stored locally on your device using Apple's SwiftData framework. This data is protected by iOS device encryption and the app sandbox. Authentication tokens are stored in the iOS Keychain with <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code> protection.</p>
+
+    <h3>3.2 Cloud Storage</h3>
+    <p>If you create an account and enable sync, your data is stored on Supabase (hosted on Amazon Web Services). All data is encrypted in transit (TLS 1.2+) and at rest. Row Level Security (RLS) ensures each user can only access their own data.</p>
+
+    <h3>3.3 Third-Party Services</h3>
+    <ul>
+        <li><strong>Supabase:</strong> Cloud database, authentication, and file storage. <a href="https://supabase.com/privacy">Supabase Privacy Policy</a></li>
+        <li><strong>Google Gemini (via server-side proxy):</strong> AI document generation. Your API key is never stored on your device. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><strong>Apple:</strong> Sign in with Apple, StoreKit for in-app purchases, Push Notifications. <a href="https://www.apple.com/privacy/">Apple Privacy Policy</a></li>
+    </ul>
+
+    <h2>4. Data Sharing</h2>
+    <p>We do not sell, rent, or share your personal information with third parties for marketing purposes. Your data may be shared only in the following circumstances:</p>
+    <ul>
+        <li><strong>At Your Direction:</strong> When you share a document via email, SMS, WhatsApp, or a shareable link, the document content is shared with your intended recipient.</li>
+        <li><strong>Service Providers:</strong> Supabase (hosting), Google (AI processing) as described above, strictly for providing app functionality.</li>
+        <li><strong>Legal Requirements:</strong> If required by law, court order, or governmental authority.</li>
+    </ul>
+
+    <h2>5. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+        <li><strong>Access:</strong> View all your data within the App at any time.</li>
+        <li><strong>Export:</strong> Export your documents, clients, and expenses as CSV files.</li>
+        <li><strong>Delete:</strong> Delete individual documents, clients, or all data from Settings > Data > Delete All Data. This removes data from your device. To delete your cloud data, sign out and contact us.</li>
+        <li><strong>Portability:</strong> Export your data in standard formats (PDF, CSV).</li>
+        <li><strong>Withdraw Consent:</strong> You can stop using cloud sync by signing out. The App works fully offline without an account.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+        <li><strong>Local Data:</strong> Retained on your device until you delete it or uninstall the App.</li>
+        <li><strong>Cloud Data:</strong> Retained as long as your account is active. Deleted data is soft-deleted with a 30-day retention period before permanent removal.</li>
+        <li><strong>Shared Invoice Links:</strong> Active until you deactivate them. Deactivated links are no longer accessible.</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>SwiftBill is not directed at children under the age of 13 (or the applicable age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+
+    <h2>8. International Data Transfers</h2>
+    <p>If you use cloud sync, your data may be transferred to and stored on servers located outside your country of residence. We use Supabase, which provides infrastructure in compliance with applicable data protection regulations. By using cloud sync features, you consent to such transfers.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Effective Date" at the top of this page. Your continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or your data, please contact us at:</p>
+    <p><strong>Email:</strong> <a href="mailto:contact@swiftbill.app">contact@swiftbill.app</a></p>
+
+    <div class="footer">
+        <p>&copy; 2026 SwiftBill. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
